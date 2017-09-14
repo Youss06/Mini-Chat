@@ -26,11 +26,12 @@
 
     }
 
-$reponse = $bdd->query('SELECT * FROM messages');
+$reponse = $bdd->query('SELECT * FROM messages  LIMIT 0, 10');
 
 while ($donnees = $reponse->fetch())
 {
-  echo $donnees['pseudo']. ':' .$donnees['message'] .'<br />' ;
+
+	echo '<p><strong>' . ($donnees['pseudo']) . '</strong> : ' . ($donnees['message']) . '</p>';
 }
 
 
