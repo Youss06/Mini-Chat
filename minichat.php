@@ -30,7 +30,7 @@ $reponse = $bdd->query('SELECT * FROM messages');
 
 while ($donnees = $reponse->fetch())
 {
-  echo $donnees['pseudo'] .'<br />' ;
+  echo $donnees['pseudo']. ':' .$donnees['message'] .'<br />' ;
 }
 
 
